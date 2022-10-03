@@ -1,0 +1,40 @@
+package cucumberFramework;
+
+import org.junit.Assert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+
+
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import utility.SeleniumUtility;
+
+public class GoogleStepDefOutline extends SeleniumUtility {
+	WebDriver driver;
+	
+ @Given("^Google page is already open$")
+ public void open_google_page() {
+	 driver=setUp("chrome", "https://www.google.com/");
+ }
+ 
+ @When("^User enters the (.+) in searchBox and Enter$")
+ public void searching_data(String text) {
+	 driver.findElement(By.name("q")).sendKeys(text,Keys.ENTER);
+ }
+ 
+ @Then("^User able to see the (.+) title on ResultPage$")
+ 	public void title(String text) {
+	 Assert.assertTrue(driver.getTitle().contains("Google Search"));
+ }
+ 
+ @And("^Driver will close$")
+	 public void Close() {
+	 driver.close();
+	 
+ }
+ }
+ 
+

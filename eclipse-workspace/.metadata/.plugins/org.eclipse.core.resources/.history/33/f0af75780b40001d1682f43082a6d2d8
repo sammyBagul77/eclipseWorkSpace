@@ -1,0 +1,13 @@
+Feature: lead Creation
+
+
+Background: 
+User should be able to login in with valid details.
+    Given Chrome browser should open and user should on Vtiger Page
+    When User enters username as "<username>" and Password as"<password>" and Enter
+    Then User should navigate on vTiger Homepage
+
+  Scenario:  Vtiger lead creation
+    When User clicks on dashBoard menu and clicks on Marketing
+    Then User able to see lead in list and user able to click on it
+

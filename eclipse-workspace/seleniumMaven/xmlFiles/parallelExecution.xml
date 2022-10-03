@@ -1,0 +1,18 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="parallelExe" parallel="methods" thread-count="2">
+	<test name="driver1">
+		<parameter name="browser" value="chrome" />
+		<parameter name="appUrl" value="https://www.globalsqa.com/demo-site/" />
+		<classes>
+			<class name="testNgProjects.parallelExecution"/>
+		</classes>
+	</test>
+	<test name="driver2">
+		<parameter name="browser" value="firefox" />
+		<parameter name="appUrl" value="https://www.globalsqa.com/demo-site/" />
+		<classes>
+			<class name="testNgProjects.parallelExecution">
+			</class>
+		</classes>
+	</test>
+</suite>

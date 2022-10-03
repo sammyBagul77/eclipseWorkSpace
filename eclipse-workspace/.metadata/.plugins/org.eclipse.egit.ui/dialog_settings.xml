@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="0" key="org.eclipse.egit.ui.internal.clone.GitSelectWizardPageWizardSel"/>
+	<list key="EGit.KnownHosts">
+		<item value="git.eclipse.org"/>
+		<item value="bitbucket.org"/>
+		<item value="github.com"/>
+	</list>
+	<list key="RepositorySelectionPage.UsedUris">
+		<item value="https://github.com/lux2123/seleniumPractice"/>
+		<item value="https://github.com/lux2123/seleniumPractice/tree/master/seleniumBasic"/>
+		<item value="https://github.com/QAAutomation-lab/13thMay_2022"/>
+		<item value="https://github.com/QAAutomation-lab/13thMay_2022/tree/master/MavenTestMay2022"/>
+	</list>
+	<section name="GitImportWizard">
+		<item value="true" key="GitProjectsImportPage.STORE_NESTED_PROJECTS"/>
+	</section>
+</section>

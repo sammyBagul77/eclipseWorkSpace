@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+<listeners>
+        <listener class-name="retryLogic.iAnnotationTransform"/>
+  </listeners>
+  <test thread-count="1" name="iannotation">
+    <classes>
+      <class name="retryLogic.testFailed1"/>
+    </classes>
+  </test> <!-- iannotation -->
+</suite> <!-- Suite -->

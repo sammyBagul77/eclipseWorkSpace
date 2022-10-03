@@ -1,0 +1,16 @@
+package chinpro;
+
+public class whileManoj {
+	public static void main(String[] args) {
+
+	int i =0,sum=0;
+	while (i<30) {
+		
+		sum =sum+i;
+		System.out.println("Value Of I: " +i);
+		System.out.println(sum);
+	i++;
+	}
+	
+	}
+}

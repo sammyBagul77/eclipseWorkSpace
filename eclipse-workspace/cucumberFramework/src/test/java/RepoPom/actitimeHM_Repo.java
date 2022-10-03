@@ -1,0 +1,25 @@
+package RepoPom;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import utility.SeleniumUtility;
+
+public class actitimeHM_Repo extends SeleniumUtility {
+	WebDriver driver;
+
+	public actitimeHM_Repo(WebDriver driver) {
+		this.driver = driver;
+
+		PageFactory.initElements(driver, this);
+	}
+	
+	@FindBy(xpath=("//a[@*='content tasks']"))
+	public WebElement tasks;
+	
+	public void task() {
+		tasks.click();
+	}
+}

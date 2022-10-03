@@ -1,0 +1,41 @@
+package cucumberFramework;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
+
+import RepoPom.actitimeHM_Repo;
+import RepoPom.actitimeLog_Repo;
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import utility.SeleniumUtility;
+
+public class actTimeLoGPg extends SeleniumUtility {
+    WebDriver driver;
+    actitimeLog_Repo actLog;
+    actitimeHM_Repo actHM;
+	 @Given("^User already on login page of Actitime$")
+	    public void user_already_on_login_page_of_actitime()  {
+	        driver =setUp("chrome", "https://demo.actitime.com/login.do");
+	        actLog = new actitimeLog_Repo(driver);
+	        actHM =new actitimeHM_Repo(driver);
+	    }
+
+	    @When("^User should able to login with Username as (.+) and Password as (.+)$")
+	    public void voidlogin_with_username_as_and_password_as(String username, String password)  {
+	        actLog.login(username, password);
+	    }
+	    
+	    @Then("^User can see Home Page of Actitime having Title (.+)$")
+	    public void user_can_see_home_page_of_actitime_having_title(String title) throws InterruptedException {
+	    	waitTillElementVisible(actHM.tasks);
+	        Assert.assertTrue(driver.getTitle().contains(title));
+	    }
+	    
+	    @And("^user able to click on menu element i.e Tasks$")
+	    public void user_able_to_click_on_menu_element_ie_tasks(){
+	        actHM.task();
+	    }
+	}
+

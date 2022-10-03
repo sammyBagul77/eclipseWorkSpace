@@ -1,0 +1,32 @@
+package Ass2;
+
+public class pr1 {
+
+	public static void main(String[] arg) {
+		char C = 'a';
+
+		switch (C) {
+		case 'a':
+			System.out.println("This is vowel a");
+			
+
+		case 'e':
+			System.out.println("This is vowel e");
+			break;
+
+		case 'i':
+			System.out.println("This is vowel i");
+			break;
+
+		case 'o':
+			System.out.println("This is vowel o");
+			break;
+
+		case 'u':
+			System.out.println("This is vowel u");
+			break;
+		}
+
+	}
+
+}

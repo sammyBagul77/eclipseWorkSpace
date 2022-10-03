@@ -1,0 +1,11 @@
+
+Feature: vTiger Login Page
+
+  Scenario: User should be able to login in with valid details.
+    Given Chrome browser should open and user should on Vtiger Page
+    When User enters username as " admin " and Password as" Test@123 " and Enter
+    Then User should navigate on vTiger Homepage
+
+ 
+  
+      

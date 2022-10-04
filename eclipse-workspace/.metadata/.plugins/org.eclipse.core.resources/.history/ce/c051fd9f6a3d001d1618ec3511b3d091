@@ -1,0 +1,16 @@
+package JavaScript;
+
+import org.openqa.selenium.JavascriptException;
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.BeforeTest;
+
+import utility.SeleniumUtility;
+
+public class vitigerLogin extends SeleniumUtility {
+     WebDriver driver;
+	@BeforeTest
+	public void  beforeMethod() {
+	driver =setUp("chrome", "https://demo.actitime.com/login.do");
+	
+	}
+}

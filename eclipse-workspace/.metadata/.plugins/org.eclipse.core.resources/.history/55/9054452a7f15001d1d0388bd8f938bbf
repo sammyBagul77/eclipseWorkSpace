@@ -1,0 +1,15 @@
+package chinpro;
+
+public class practString {
+ public static void main(String[] args) {
+	String s1 = "jalgaon";
+	String s2 = "Java Program";
+	String s3 =new String("jalgaon");
+	String s4 = s2;
+	
+	System.out.println(s1.equals(s3));//true
+	System.out.println(s2.equals(s4));//true
+	System.out.println(s3==s1);//false
+	System.out.println(s2==s4);//false
+}
+}

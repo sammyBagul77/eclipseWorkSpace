@@ -1,0 +1,26 @@
+package JavaScript;
+
+import org.openqa.selenium.JavascriptException;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import utility.SeleniumUtility;
+
+public class vitigerLogin extends SeleniumUtility {
+     WebDriver driver;
+	@BeforeTest
+	public void  beforeMethod() {
+	driver =setUp("chrome", "https://demo.actitime.com/login.do");
+	
+	}
+	
+	@Test
+	public void  testCase() {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+	 js.executeScript("document.getElementByid('username'),click; ");
+	 js.executeScript("document.getElementByid('username'),value='admin';");
+	  
+	}
+}

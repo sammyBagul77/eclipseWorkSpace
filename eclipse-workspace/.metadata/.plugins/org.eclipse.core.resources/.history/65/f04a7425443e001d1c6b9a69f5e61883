@@ -1,0 +1,16 @@
+package RepoPom;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
+
+import utility.SeleniumUtility;
+
+public class actitimeHM_Repo extends SeleniumUtility {
+	WebDriver driver;
+
+	public actitimeHm_Repo(WebDriver driver) {
+		this.driver = driver;
+
+		PageFactory.initElements(driver, this);
+	}
+}

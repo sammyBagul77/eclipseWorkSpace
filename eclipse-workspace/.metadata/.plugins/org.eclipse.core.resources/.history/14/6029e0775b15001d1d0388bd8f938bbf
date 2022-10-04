@@ -1,0 +1,31 @@
+package chinpro;
+
+public class revStr {
+	public static void main(String[] args) {
+		//reverse string or word
+		String s1 = "Ruchika";
+		char[] s2 = s1.toCharArray();
+		for (int i = s1.length() - 1; i >= 0; i--) {
+			System.out.print(s2[i]);
+		}
+		// word to word reverse sentence
+		System.out.println();
+		System.out.println("***********************************");
+		String str = "Ruchika is Topper";
+		char[] str1 = str.toCharArray();
+		for (int i = str.length() - 1; i >= 0; i--) {
+			System.out.print(str1[i]);
+		}
+		
+		//reverse sentence
+		String str3 = "Ruchika is Topper";
+		String[] str4=str3.split(" ");
+		String temp = " ";
+		for(int i = str3.length()-1; i>=0;i--) {
+			temp = temp +" "+str4;
+		}
+		System.out.print(temp);
+		
+
+	}
+}

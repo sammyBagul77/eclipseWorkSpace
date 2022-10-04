@@ -1,0 +1,19 @@
+package seleniumMavenProject;
+
+import org.apache.poi.hwpf.sprm.SectionSprmUncompressor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+import utility.SeleniumUtility;
+
+public class geelksWindoWHandling {
+	 static WebDriver driver ;
+public static void main(String[] args) {
+        SeleniumUtility s1 = new SeleniumUtility();
+       
+	driver =s1.setUp("chorme", "https://practice.geeksforgeeks.org/courses");
+	    
+//	String HmPage  =driver.getWindowHandle();
+}
+}

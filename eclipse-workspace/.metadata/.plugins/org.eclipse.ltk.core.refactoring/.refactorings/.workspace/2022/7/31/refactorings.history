@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;Predefined Casses&apos;" deleteContents="false" description="Delete resource &apos;Predefined Casses&apos;" element1="/Predefined Casses" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1658749811727"/>
+</session>

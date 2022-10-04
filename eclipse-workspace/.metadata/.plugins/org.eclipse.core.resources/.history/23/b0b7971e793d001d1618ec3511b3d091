@@ -1,0 +1,17 @@
+package chinpro;
+
+public class whileManoj {
+public static void main(String[] args) {
+	
+	char ch ='A';
+	
+while(ch<='Z') {
+	if (ch%2 == 0 ) {
+		System.out.println((int)ch);
+	}
+	
+ch++;
+}
+	
+}
+}

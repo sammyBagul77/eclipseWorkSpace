@@ -1,0 +1,99 @@
+package RepoPom;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import utility.SeleniumUtility;
+
+public class actiTaskPg_Repo extends SeleniumUtility {
+	WebDriver driver;
+
+	public actiTaskPg_Repo(WebDriver driver) {
+		this.driver = driver;
+		PageFactory.initElements(driver, this);
+	}
+
+	@FindBy(xpath = ("//*[text()='Add New']"))
+	private WebElement addDropDown;
+
+	@FindBy(xpath = ("//*[@class='item createNewTasks']"))
+	private WebElement newtask;
+
+	@FindBy(css = "tr.selectCustomerRow>td div.comboboxButton>div:nth-child(3)")
+	private WebElement customerInput;
+
+	@FindBy(xpath = "//div[@class='searchItemList']/div[text() ='Galaxy Corporation']")
+	private WebElement customerName;
+
+	@FindBy(css = ".projectSelector .dropdownButton")
+	private WebElement projectInput;
+
+	@FindBy(xpath = "//*[@class='searchItemList']/div[text()='Android testing']")
+	private WebElement projectName;
+
+	public void taskActivity() {
+		addDropDown.click();
+		waitTillElementVisible(newtask);
+		newtask.click();
+		waitTillElementVisible(customerInput);
+		customerInput.click();
+		customerName.click();
+
+		projectInput.click();
+		projectName.click();
+
+	}
+
+	@FindBy(css = "tbody>tr:nth-of-type(1)>td.nameCell.first>.inputFieldWithPlaceholder")
+	private WebElement InputTask;
+
+	@FindBy(css = "tr:nth-of-type(1) td.deadlineCell.deadlineNotSet .dateButton")
+	private WebElement deadline;
+
+	@FindBy(css = ".x-date-right")
+	private WebElement monForword;
+
+	@FindBy(css = ".x-date-inner>tbody>tr:nth-child(2)>td:nth-child(4)")
+	private WebElement date;
+
+	@FindBy(css = ".x-date-at-ok-cancel-cell>em:first-child")
+	private WebElement okbtn;
+
+	@FindBy(xpath = "//div[text()='Create Tasks']")
+	private WebElement addTask;
+
+	public void taskCreation(String name) throws InterruptedException {
+		InputTask.click();
+		InputTask.sendKeys(name);
+		
+		waitTillElementIsClickable(deadline);
+		deadline.click();
+		Thread.sleep(600);
+		monForword.click();
+		monForword.click();
+		
+		date.click();
+//		okbtn.click();
+		Thread.sleep(600);
+		addTask.click();
+
+	}
+	@FindBy(css=".createdTasksRowsTable tr>td:nth-of-type(1)")
+	private WebElement checkbox;
+	
+	@FindBy(xpath="//*[@class='bulkOperationsPanel']//div[text()='Delete'][1]")
+	private WebElement deleteTask;
+	
+	@FindBy(xpath="//span[text()='Delete permanently']")
+	private WebElement confirm;
+	
+	public void taskDeletion() {
+		waitTillElementVisible(checkbox);
+		checkbox.click();
+		deleteTask.click();
+		waitTillElementVisible(confirm);
+		confirm.click();
+	}
+}

@@ -1,0 +1,12 @@
+package TestRunner;
+
+import io.cucumber.testng.AbstractTestNGCucumberTests;
+import io.cucumber.testng.CucumberOptions;
+
+@CucumberOptions(features = { "./features/actiTime.feature" }, glue = { "cucumberFramework" }, plugin = {
+"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:" }, monochrome = true, publish = true
+)
+
+public class run extends AbstractTestNGCucumberTests {
+
+}

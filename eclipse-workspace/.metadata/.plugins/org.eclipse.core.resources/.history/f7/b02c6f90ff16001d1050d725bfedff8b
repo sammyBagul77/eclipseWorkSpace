@@ -1,0 +1,17 @@
+package seleniumbasic;
+
+import java.util.Set;
+
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class LinkTest {
+public static void main(String[] args) {
+	System.setProperty("webdriver.chrome.driver", ".\\Executables\\chromedriver.exe");
+	ChromeDriver driver = new ChromeDriver();
+	String ExpectedLink="https://www.google.com";
+	String ActualLink= driver.getCurrentUrl("https://www.google.com");
+	System.out.println("Actual URL: "+ ActualLink);
+	System.out.println("Both Links Are Same? -> "+(ExpectedLink==ActualLink));
+	
+}
+}

@@ -1,0 +1,8 @@
+package cucumberFramework;
+
+public class GoogleStepDefOutline {
+
+	
+	
+ @Given("^Try to find (.+) related data$")
+}
